@@ -27,29 +27,11 @@ function fetchData(sub){
             {
                 let type = sub.textContent;
                 type = type.toString().toLowerCase();
-                console.log(type)
                 currentHours.innerHTML = jsonData[i]["timeframes"][`${type}`].current;
-                prevHours.innerHTML = jsonData[i].timeframes.daily.previous;
+                prevHours.innerHTML = jsonData[i]["timeframes"][`${type}`].previous;
                 
             }}
            
         })
     })
 }
-// {
-//     "title": "Work",
-//     "timeframes": {
-//       "daily": {
-//         "current": 5,
-//         "previous": 7
-//       },
-//       "weekly": {
-//         "current": 32,
-//         "previous": 36
-//       },
-//       "monthly": {
-//         "current": 103,
-//         "previous": 128
-//       }
-//     }
-//   }
