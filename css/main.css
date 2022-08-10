@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+}
+main{
+    padding: 40px 20px;
+    background-color:hsl(226, 43%, 10%);
+    /* height: 100vh; */
+}
+.main-card{
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 20px;
+}
+.main-card .info{
+    background-color:  hsl(264, 64%, 52%);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info img{
+    padding: 20px;
+    width: 40%;
+    border-radius: 50%;
+}
+.info .personal h1 {
+    font-weight: 300;
+    color:white
+}
+.type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: hsl(236, 100%, 87%);
+}
+.type span {
+    cursor:pointer
+}
+.type span.active{
+    color:white;
+}
+.card{
+    background-color: hsl(15, 100%, 70%);
+    padding:42px 0 0 0;
+    margin-top: 30px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position:top right;
+    position: relative;
+}
+.time{
+    background-color:hsl(235, 46%, 20%) ;
+    border-radius: 17px;
+    padding:30px 15px;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.time h1{
+    font-weight: 300;
+    margin-top: 20px;
+}
+.time .right{
+    margin-left: auto;
+    text-align: right;
+}
+.card.Work{
+    background-image: url("../images/icon-work.svg");
+}
+.card.Play{
+    background-image: url("../images/icon-play.svg");
+    background-color: hsl(195, 74%, 62%);
+}
+.card.Study{
+    background-image: url("../images/icon-study.svg");
+    background-color: hsl(348, 100%, 68%);
+}
+.card.Exercise{
+    background-image: url("../images/icon-exercise.svg");
+    background-color: hsl(145, 58%, 55%);
+}
+.card.Social{
+    background-image: url("../images/icon-social.svg");
+    background-color:hsl(264, 64%, 52%);
+}
+.card.Self{
+    background-image: url("../images/icon-self-care.svg");
+    background-color:  hsl(43, 84%, 65%);
+}
+@media (min-width:376px) {
+    main{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px   ;
+    }
+    .main-card{
+        grid-row: 1 / 3 ;
+    }
+    .main-card .info{
+        padding-left: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 30px;
+    }
+    .info img {
+        padding: 0;
+        width: 70px;
+        margin: 40px 0;
+    }
+    .type{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .type span{
+    margin-top: 30px;
+    }
+    .card{margin-top: 0;}
+    
+}
