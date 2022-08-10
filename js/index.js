@@ -1,4 +1,5 @@
 // Selecting our main Elements
+import jsonData from  "../data.json" assert {type: 'json'};
 let subscriptions = document.querySelectorAll(".type span");
 let cards = document.querySelectorAll(".card");
 
@@ -17,11 +18,6 @@ function fetchData(sub){
         let currentHours = card.querySelector("h1 span");
         let prevHours = card.querySelector("p span");
 
-        fetch("../data.json").then(response =>{
-            return response.json();
-        }).then(jsonData => {
-            // let p = JSON.parse(jsonData)
-            console.log(jsonData[1].title);
             for(let i =0 ; i <5 ;i++){
             if (card.classList.contains(jsonData[i].title))
             {
@@ -32,6 +28,6 @@ function fetchData(sub){
                 
             }}
            
-        })
+        
     })
 }
