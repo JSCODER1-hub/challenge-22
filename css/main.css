@@ -9,7 +9,8 @@ body{
 main{
     padding: 40px 20px;
     background-color:hsl(226, 43%, 10%);
-    /* height: 100vh; */
+    height: 100vh;
+    align-content:center;
 }
 .main-card{
     background-color: hsl(235, 46%, 20%);
